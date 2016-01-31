@@ -156,6 +156,8 @@
 		7C9F944A1C5929AD0068BA0E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Lew Flauta";
 				TargetAttributes = {
@@ -409,6 +411,7 @@
 				7C9F94731C5929AE0068BA0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C9F94741C5929AE0068BA0E /* Build configuration list for PBXNativeTarget "AllstateCar AudioMeterTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				7C9F94761C5929AE0068BA0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
