@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ohH-Fs-MUE">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AutdioMeter-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AllstateCar_AudioMeter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AudioMeter" title="AutdioMeter" id="vXZ-lx-hvc" customClass="ViewController" customModule="AllstateCar_AudioMeter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,39 +18,136 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3b9-Vt-UHw">
-                                <rect key="frame" x="252" y="156" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3b9-Vt-UHw">
+                                <rect key="frame" x="288" y="285" width="25" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="currentLevel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en1-sZ-TJ8">
-                                <rect key="frame" x="253" y="64" width="95" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentLevel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en1-sZ-TJ8">
+                                <rect key="frame" x="253" y="64" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-ts-5Fb">
-                                <rect key="frame" x="275" y="99" width="50" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-ts-5Fb">
+                                <rect key="frame" x="275" y="237" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9Nl-RC-B8h"/>
+                                    <constraint firstAttribute="width" constant="50" id="DQK-F6-uhC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-Tk-vhX">
+                                <rect key="frame" x="280" y="115" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psu-nh-5J5">
+                                <rect key="frame" x="280" y="137" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yts-BC-u99">
+                                <rect key="frame" x="279" y="166" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug3-pF-9GW">
+                                <rect key="frame" x="279" y="93" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ok" translatesAutoresizingMaskIntoConstraints="NO" id="nIu-Cm-tF6">
+                                <rect key="frame" x="254" y="372" width="92" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="kFu-3J-En9"/>
+                                    <constraint firstAttribute="width" constant="92" id="mb4-UC-TLU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="en1-sZ-TJ8" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ANf-OQ-RzL"/>
+                            <constraint firstItem="nIu-Cm-tF6" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="aPF-ww-qtA"/>
                             <constraint firstItem="u7p-ts-5Fb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="e6C-cP-czC"/>
+                            <constraint firstItem="nIu-Cm-tF6" firstAttribute="top" secondItem="3b9-Vt-UHw" secondAttribute="bottom" constant="57" id="eGB-f2-eY6"/>
                             <constraint firstItem="3b9-Vt-UHw" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="gGC-SE-x2P"/>
+                            <constraint firstItem="u7p-ts-5Fb" firstAttribute="top" secondItem="en1-sZ-TJ8" secondAttribute="bottom" constant="152" id="iPO-XS-rLL"/>
+                            <constraint firstItem="u7p-ts-5Fb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="237" id="lS4-64-ne9"/>
+                            <constraint firstItem="3b9-Vt-UHw" firstAttribute="top" secondItem="u7p-ts-5Fb" secondAttribute="bottom" constant="27" id="xfa-BN-THq"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="AudioMeter" id="F4B-1a-Dou"/>
                     <connections>
                         <outlet property="currentLevelLbl" destination="en1-sZ-TJ8" id="MWP-BW-B98"/>
+                        <outlet property="currentLevelLbl1" destination="Ug3-pF-9GW" id="4id-WC-6nS"/>
+                        <outlet property="currentLevelLbl2" destination="Psu-nh-5J5" id="EuP-Gb-RK7"/>
                         <outlet property="inputLevelLabel" destination="3b9-Vt-UHw" id="QTh-ry-pXj"/>
+                        <outlet property="statusImg" destination="nIu-Cm-tF6" id="hxk-bU-bR2"/>
                         <outlet property="statusLbl" destination="u7p-ts-5Fb" id="UDD-Lb-6ol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="467"/>
+        </scene>
+        <!--rewards-->
+        <scene sceneID="tWP-AX-n27">
+            <objects>
+                <viewController storyboardIdentifier="Rewards" title="rewards" id="ecI-sU-Ugb" customClass="RewardsWebViewController" customModule="AllstateCar_AudioMeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Ry-Ja-GJw"/>
+                        <viewControllerLayoutGuide type="bottom" id="zbH-Xn-ghx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dFA-fL-BAq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niS-E2-ibw">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="niS-E2-ibw" firstAttribute="top" secondItem="5Ry-Ja-GJw" secondAttribute="bottom" constant="8" id="AdQ-7E-dj5"/>
+                            <constraint firstItem="niS-E2-ibw" firstAttribute="leading" secondItem="dFA-fL-BAq" secondAttribute="leadingMargin" constant="-20" id="HRL-QV-vq4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="niS-E2-ibw" secondAttribute="trailing" constant="-20" id="YHK-Vx-ftn"/>
+                            <constraint firstItem="zbH-Xn-ghx" firstAttribute="top" secondItem="niS-E2-ibw" secondAttribute="bottom" id="v6f-ov-Qu0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rewards" id="1Ac-Dj-M1h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckS-tU-aZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2067" y="467"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mx1-x2-wTk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ohH-Fs-MUE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="e5h-h2-HL1">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ecI-sU-Ugb" kind="relationship" relationship="viewControllers" id="Ew8-w0-tVQ"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="FoV-Mo-ryO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIo-M3-8SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255" y="467"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ok" width="160" height="160"/>
+    </resources>
 </document>

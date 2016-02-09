@@ -6,6 +6,14 @@ import CoreAudio
 class ViewController: UIViewController {
 
     @IBOutlet weak var currentLevelLbl: UILabel!
+    @IBOutlet weak var currentLevelLbl1: UILabel!
+    @IBOutlet weak var currentLevelLbl2: UILabel!
+    @IBOutlet weak var currentLevelLbl3: UILabel!
+    @IBOutlet weak var currentLevelLbl4: UILabel!
+
+
+
+    @IBOutlet weak var statusImg: UIImageView!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var inputLevelLabel: UITextField!
     var recorder: AVAudioRecorder!
@@ -52,27 +60,38 @@ class ViewController: UIViewController {
             recorder.meteringEnabled = true
 
             //start recording
-            recorder.record()
+
 
             //instantiate a timer to be called with whatever frequency we want to grab metering values
-            self.levelTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("levelTimerCallback"), userInfo: nil, repeats: true)
+            self.levelTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("levelTimerCallback"), userInfo: nil, repeats: true)
 
         }
 
-    
+
 
     //This selector/function is called every time our timer (levelTime) fires
     func levelTimerCallback() {
         //we have to update meters before we can get the metering values
+        recorder.record()
         recorder.updateMeters()
 
         //print to the console if we are beyond a threshold value. Here I've used -7
         currentLevelLbl.text = "\(recorder.averagePowerForChannel(0))"
-        if recorder.averagePowerForChannel(0) > -7 {
-            print("db > -7 ", terminator: "")
-            print(recorder.averagePowerForChannel(0))
-            //do something
+        //currentLevelLbl1.text = "\(recorder.averagePowerForChannel(1))"
+        //currentLevelLbl2.text = "\(recorder.peakPowerForChannel(0))"
+
+        if recorder.averagePowerForChannel(0) > -30 {
+            print("db > -20 ", terminator: "")
+            statusLbl.text = "TOO LOUD"
+            statusImg.image = UIImage(named: "farTooLoud.jpeg")
+
+        } else {
+            statusLbl.text = "NORMAL"
+            statusImg.image = UIImage(named: "ok.jpeg")
         }
+        recorder.stop()
+
+
     }
     
     
